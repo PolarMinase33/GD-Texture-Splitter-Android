@@ -56,7 +56,7 @@ Aplicación Android offline para dividir, fusionar y convertir texturas de Geome
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/TU-USUARIO/gd-texture-splitter-android.git
+git clone https://github.com/PolarMinase33/gd-texture-splitter-android.git
 ```
 
 2. Abre en Android Studio
