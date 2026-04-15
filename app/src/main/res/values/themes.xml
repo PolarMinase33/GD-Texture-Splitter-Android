@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.GDTextureSplitter" parent="Theme.Material3.DynamicColors.DayNight">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        
+        <item name="colorPrimary">@color/material_dynamic_primary_light</item>
+        <item name="colorOnPrimary">@color/material_dynamic_on_primary_light</item>
+        <item name="colorSurface">@color/material_dynamic_surface_light</item>
+    </style>
+
+    <style name="Widget.App.FloatingNavigationBar" parent="Widget.Material3.NavigationBar">
+        <item name="containerColor">?attr/colorSurfaceVariant</item>
+        <item name="itemIconTint">?attr/colorOnSurfaceVariant</item>
+        <item name="itemTextColor">?attr/colorOnSurfaceVariant</item>
+        <item name="enclosure">@null</item>
+    </style>
+</resources>
