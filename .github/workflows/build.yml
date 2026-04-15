@@ -1,4 +1,4 @@
-name: Build GD Texture Splitter
+name: Android Build
 on: [push]
 jobs:
   build:
