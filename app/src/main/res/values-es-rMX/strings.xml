@@ -1,1 +1,7 @@
-
+<resources>
+    <string name="app_name">GD Texture Splitter</string>
+    <string name="btn_split">Separar Texturas</string>
+    <string name="btn_merge">Unir Sprites</string>
+    <string name="btn_port">Portear Gráficos</string>
+    <string name="folder_created">Carpeta creada en Almacenamiento interno/GD Texture Splitter/Export</string>
+</resources>
