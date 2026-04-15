@@ -1,40 +1,22 @@
-// Fragmento de la UI principal con Navigation Bar Flotante
 @Composable
-fun MainScreen() {
-    val navController = rememberNavController()
-    Scaffold(
-        bottomBar = {
-            FloatingNavigationBar(navController)
-        }
-    ) { innerPadding ->
-        NavHost(navController, startDestination = "split", Modifier.padding(innerPadding)) {
-            composable("split") { SplitScreen() }
-            composable("merge") { MergeScreen() }
-            composable("port") { PortScreen() }
-            composable("settings") { SettingsScreen() }
-        }
-    }
-}
-
-@Composable
-fun FloatingNavigationBar(navController: NavController) {
+fun FloatingNavBar(navController: NavController) {
     Surface(
         modifier = Modifier
             .padding(16.dp)
-            .clip(RoundedCornerShape(24.dp)), // Estilo Expressive
-        color = MaterialTheme.colorScheme.surfaceVariant,
+            .fillMaxWidth()
+            .height(64.dp),
+        shape = CircleShape, // Forma de cápsula Expressive
+        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.9f),
         tonalElevation = 8.dp
     ) {
-        NavigationBar(containerColor = Color.Transparent) {
-            val items = listOf("Split", "Merge", "Port", "Settings")
-            items.forEach { item ->
-                NavigationBarItem(
-                    icon = { Icon(Icons.Default.Build, contentDescription = item) },
-                    label = { Text(item) },
-                    selected = false,
-                    onClick = { navController.navigate(item.lowercase()) }
-                )
-            }
+        Row(
+            horizontalArrangement = Arrangement.SpaceEvenly,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            IconButton(onClick = { /* Navegar a Split */ }) { Icon(Icons.Default.Scissors, "Split") }
+            IconButton(onClick = { /* Navegar a Merge */ }) { Icon(Icons.Default.Layers, "Merge") }
+            IconButton(onClick = { /* Navegar a Port */ }) { Icon(Icons.Default.Transform, "Port") }
+            IconButton(onClick = { /* Navegar a Settings */ }) { Icon(Icons.Default.Settings, "Settings") }
         }
     }
 }
